@@ -1,0 +1,20 @@
+<div style="display: flex;">
+
+  <jqxDropDownList #myDropDownList [width]="'190px'" [height]="'30px'" [displayMember]="'Nombre'" [valueMember]="'Id'"
+    [source]="appsAdapter" [dropDownHeight]="220" [filterable]="true" [searchMode]="'containsignorecase'"
+    [filterPlaceHolder]="'Buscar...'" [checkboxes]="true">
+  </jqxDropDownList>
+
+  <jqxGrid #myGrid [selectionmode]="'checkbox'" [source]="source" [theme]="'material'" [autoheight]="true" [pageable]="true"
+    [altrows]="true" [filterable]="true" [sortable]="true" [columns]="columns" [rowdetailstemplate]="rowdetailstemplate"
+    [initrowdetails]="initRowDetails" [rowdetails]="true" >
+  </jqxGrid>
+
+
+  <jqxButton (onClick)="clickButton($event)" [width]="'100px'" [height]="'30px'" [value]="'Filtrar'">
+  </jqxButton>
+
+  <jqxButton (onClick)="myGrid.clearfilters()" [width]="'100px'" [height]="'30px'" [value]="'Reset'">
+  </jqxButton>
+
+</div>
